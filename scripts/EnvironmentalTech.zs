@@ -3,6 +3,8 @@ import crafttweaker.item.IIngredient;
 
 # Remove Recipes
 recipes.remove(<environmentaltech:litherite_crystal>);
+recipes.remove(<environmentaltech:structure_frame_1>);
+recipes.remove(<environmentaltech:connector>);
 
 val Array = [
     <environmentaltech:nano_cont_ranged_1>,
@@ -47,3 +49,7 @@ for item in Array{
     mods.jei.JEI.removeAndHide(item);
 }
 # Add Recipes
+
+mods.pneumaticcraft.pressurechamber.addRecipe([<ore:ingotMeteoricIron>, <biomesoplenty:terrestrial_artifact>, <ore:manaDiamond> * 2, <thermalfoundation:material:1025>, <enderio:item_material:18>], 5.0, [<environmentaltech:litherite_crystal>]);
+recipes.addShaped(<environmentaltech:connector>, [[<thermalfoundation:material:24>, <moreplates:redstone_alloy_plate>, <thermalfoundation:material:24>],[<moreplates:redstone_alloy_plate>, <thermalfoundation:material:25>, <moreplates:redstone_alloy_plate>], [<thermalfoundation:material:24>, <moreplates:redstone_alloy_plate>, <thermalfoundation:material:24>]]);
+recipes.addShaped(<environmentaltech:structure_frame_1>, [[<thermalfoundation:storage>, <minecraft:redstone>, <thermalfoundation:storage>],[<environmentaltech:litherite_crystal>, <environmentaltech:interconnect>, <environmentaltech:litherite_crystal>], [<minecraft:iron_block>, <minecraft:dye:4>, <minecraft:iron_block>]]);

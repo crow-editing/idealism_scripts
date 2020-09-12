@@ -16,8 +16,8 @@ val Array = [
 	<botania:manasteelchest>,
 	<botania:manasteellegs>,
 	<botania:manasteelhelm>,
+	<botania:lexicon>,
 ] as IIngredient[];
-
 
 for item in Array{
     recipes.remove(item);
@@ -28,6 +28,7 @@ raH(<botania:terrasteelhelmreveal>.withTag({}));
 raH(<botania:elementiumhelmreveal>.withTag({}));
 
 #Add Recipes
+recipes.addShapeless(<botania:lexicon>, [<botania:fertilizer>,<minecraft:book>]);
 recipes.addShaped(<botania:manasteelboots>, [[<botania:manaresource>, null, <botania:manaresource>], [<botania:manaresource>, <tcomplement:manyullyn_boots>, <botania:manaresource>]]);
 recipes.addShaped(<botania:manasteellegs>, [[<botania:manaresource>, <botania:manaresource>, <botania:manaresource>],[<botania:manaresource>, <tcomplement:manyullyn_leggings>, <botania:manaresource>], [<botania:manaresource>, null, <botania:manaresource>]]);
 recipes.addShaped(<botania:manasteelchest>, [[<botania:manaresource>, <tcomplement:manyullyn_chestplate>, <botania:manaresource>],[<botania:manaresource>, <botania:manaresource>, <botania:manaresource>], [<botania:manaresource>, <botania:manaresource>, <botania:manaresource>]]);

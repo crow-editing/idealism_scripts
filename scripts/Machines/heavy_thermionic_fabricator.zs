@@ -75,7 +75,7 @@ var T8 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine, 
     T8.addEnergyPerTickInput(6000);
 	T8.build();
 
-var T9 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine, 5, 0);
+var T9 = mods.modularmachinery.RecipeBuilder.newBuilder("emerald_tube", machine, 5, 0);
 
     T9.addItemOutput(<forestry:thermionic_tubes:9> * 4);
 	T9.addItemInput(<ore:gemEmerald>, 5);
@@ -84,7 +84,7 @@ var T9 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine, 
     T9.addEnergyPerTickInput(6000);
 	T9.build();
 
-var T10 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine, 5, 0);
+var T10 = mods.modularmachinery.RecipeBuilder.newBuilder("apatine_tube", machine, 5, 0);
 
     T10.addItemOutput(<forestry:thermionic_tubes:10> * 4);
 	T10.addItemInput(<ore:gemApatite>, 5);
@@ -93,7 +93,7 @@ var T10 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine,
     T10.addEnergyPerTickInput(6000);
 	T10.build();
 
-var T11 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine, 5, 0);
+var T11 = mods.modularmachinery.RecipeBuilder.newBuilder("lapis_tube", machine, 5, 0);
 
     T11.addItemOutput(<forestry:thermionic_tubes:11> * 4);
 	T11.addItemInput(<ore:gemLapis>, 5);
@@ -101,3 +101,30 @@ var T11 = mods.modularmachinery.RecipeBuilder.newBuilder("rubber_tube", machine,
     T11.addFluidInput(<liquid:glass> * 500);
     T11.addEnergyPerTickInput(6000);
 	T11.build();
+
+var T12 = mods.modularmachinery.RecipeBuilder.newBuilder("coil3", machine, 5, 0);
+
+    T12.addItemOutput(<thermalfoundation:material:513>);
+	T12.addItemInput(<appliedenergistics2:material:22>);
+	T12.addItemInput(<actuallyadditions:item_misc:8>);
+    T12.addFluidInput(<liquid:glass> * 500);
+    T12.addEnergyPerTickInput(6000);
+	T12.build();
+
+var T13 = mods.modularmachinery.RecipeBuilder.newBuilder("coil2", machine, 5, 0);
+
+    T13.addItemOutput(<thermalfoundation:material:514>);
+	T13.addItemInput(<appliedenergistics2:material:23>);
+	T13.addItemInput(<actuallyadditions:item_misc:8>);
+    T13.addFluidInput(<liquid:glass> * 500);
+    T13.addEnergyPerTickInput(6000);
+	T13.build();
+
+var T14 = mods.modularmachinery.RecipeBuilder.newBuilder("coil", machine, 5, 0);
+
+    T14.addItemOutput(<thermalfoundation:material:515>);
+	T14.addItemInput(<appliedenergistics2:material:24>);
+	T14.addItemInput(<actuallyadditions:item_misc:8>);
+    T14.addFluidInput(<liquid:glass> * 500);
+    T14.addEnergyPerTickInput(6000);
+	T14.build();

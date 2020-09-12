@@ -96,6 +96,12 @@ val Array = [
     <mysticalagradditions:dragon_egg_seeds>,
     <mysticalagradditions:awakened_draconium_seeds>,
     <mysticalagradditions:neutronium_seeds>,
+    <mysticalagriculture:master_infusion_crystal>,
+    <mysticalagriculture:infusion_crystal>,
+    <jaopca:item_mysticalseedsgalena>,
+    <jaopca:item_mysticalseedssodalite>,
+    <jaopca:item_mysticalseedsbauxite>,
+    <jaopca:item_mysticalseedsdimensionalshard>,
 
 ] as IIngredient[];
 
@@ -152,6 +158,24 @@ val JEIREMOVE = [
     <mysticalagriculture:starmetal_seeds>,
     <mysticalagriculture:rock_crystal_seeds>,
     <mysticalagriculture:ender_amethyst_seeds>,
+    <jaopca:item_mysticalseedsastralstarmetal>,
+    <jaopca:item_mysticalseedscarbon>,
+    <jaopca:item_mysticalseedscrystal>,
+    <jaopca:item_mysticalseedsdarkiron>,
+    <jaopca:item_mysticalseedsmercury>,
+    <jaopca:item_mysticalseedspalladium>,
+    <jaopca:item_mysticalseedsbluediamond>,
+    <jaopca:item_mysticalseedsbluegem>,
+    <jaopca:item_mysticalseedsgreendiamond>,
+    <jaopca:item_mysticalseedspurplediamond>,
+    <jaopca:item_mysticalseedsquartzblack>,
+    <jaopca:item_mysticalseedsreddiamond>,
+    <jaopca:item_mysticalseedsredgem>,
+    <jaopca:item_mysticalseedswhitegem>,
+    <jaopca:item_mysticalseedsyellowdiamond>,
+    <jaopca:item_mysticalseedscinnabar>,
+    <jaopca:item_mysticalseedspyrite>,
+    <jaopca:item_mysticalseedssphalerite>,
 
     
 ] as IIngredient[];
@@ -163,20 +187,27 @@ for item in JEIREMOVE{
 
 # Add Recipes
 mods.thermalexpansion.InductionSmelter.addRecipe(<mysticalagriculture:crafting:16>, <mysticalagriculture:crafting:5> * 4, <minecraft:wheat_seeds>, 1500, <mysticalagriculture:mystical_fertilizer>, 5);
+
+# Master Infusion Crystal
+mods.botania.RuneAltar.addRecipe(<mysticalagriculture:master_infusion_crystal>,[<botania:rune:9>, <botania:rune:10>, <botania:rune:11>, <botania:rune:12>, <botania:rune:13>, <botania:rune:14>, <botania:rune:15>, <botania:rune:7>, <botania:rune:6>, <botania:rune:5>, <botania:rune:4>, <botania:rune:3>, <botania:rune:2>, <botania:rune:1>, <botania:rune>, <botania:rune:8>, <mysticalagriculture:ingot_storage:5>, <draconicevolution:draconium_ingot>, <minecraft:nether_star>], 1000000);
+
+# Infusion Crystal
+recipes.addShaped(<mysticalagriculture:infusion_crystal>, [[<mysticalagriculture:crafting:5>, <mysticalagriculture:crafting>, <mysticalagriculture:crafting:5>],[<mysticalagriculture:crafting>, <astralsorcery:itemcraftingcomponent:4>, <mysticalagriculture:crafting>], [<mysticalagriculture:crafting:5>, <mysticalagriculture:crafting>, <mysticalagriculture:crafting:5>]]);
+
 # Crafing Seeds
    mods.actuallyadditions.Empowerer.addRecipe(<mysticalagriculture:crafting:17>, <mysticalagriculture:crafting:16>, <ore:blockInferiumEssence>, <ore:ingotInferium>, <ore:blockInferiumEssence>, <ore:ingotInferium>, 50000, 20, [0.5, 0.3, 0.2]);
    mods.actuallyadditions.Empowerer.addRecipe(<mysticalagriculture:crafting:18>, <mysticalagriculture:crafting:16>, <ore:blockPrudentiumEssence>, <ore:ingotPrudentium>, <ore:blockPrudentiumEssence>, <ore:ingotPrudentium>, 80000, 20, [0.5, 0.3, 0.2]);
    mods.actuallyadditions.Empowerer.addRecipe(<mysticalagriculture:crafting:19>, <mysticalagriculture:crafting:16>, <ore:blockIntermedium>, <ore:ingotIntermedium>, <ore:blockIntermedium>, <ore:ingotIntermedium>, 100000, 20, [0.5, 0.3, 0.2]);
    mods.actuallyadditions.Empowerer.addRecipe(<mysticalagriculture:crafting:20>, <mysticalagriculture:crafting:16>, <ore:blockSuperiumEssence>, <ore:ingotSuperium>, <ore:blockSuperiumEssence>, <ore:ingotSuperium>, 300000, 20, [0.5, 0.3, 0.2]);
-   mods.actuallyadditions.Empowerer.addRecipe(<mysticalagriculture:crafting:21>, <mysticalagriculture:crafting:16>, <ore:blockSupremiumEssence>, <ore:ingotSupremium>, <ore:blockSupremiumEssence>, <ore:ingotSupremium>, 50000, 20, [0.5, 0.3, 0.2]);
-   mods.actuallyadditions.Empowerer.addRecipe(<mysticalagradditions:insanium:1>, <mysticalagriculture:crafting:16>, <ore:blockInsaniumEssence>, <ore:ingotInsanium>, <ore:blockInsaniumEssence>, <ore:ingotInsanium>, 5000000, 20, [0.5, 0.3, 0.2]);
+   mods.actuallyadditions.Empowerer.addRecipe(<mysticalagriculture:crafting:21>, <mysticalagriculture:crafting:16>, <ore:blockSupremiumEssence>, <ore:ingotSupremium>, <ore:blockSupremiumEssence>, <ore:ingotSupremium>, 500000, 20, [0.5, 0.3, 0.2]);
+   mods.actuallyadditions.Empowerer.addRecipe(<mysticalagradditions:insanium:1>, <mysticalagriculture:crafting:16>, <ore:blockInsaniumEssence>, <ore:ingotInsanium>, <ore:blockInsaniumEssence>, <ore:ingotInsanium>, 1000000, 20, [0.5, 0.3, 0.2]);
 # Ingots
-   mods.nuclearcraft.AlloyFurnace.addRecipe(<ore:ingotBaseEssence>, <ore:essenceInferium> * 4, <ore:ingotInferium>);
-   mods.nuclearcraft.AlloyFurnace.addRecipe(<ore:ingotInferium>, <ore:essencePrudentium> * 4, <ore:ingotPrudentium>);
-   mods.nuclearcraft.AlloyFurnace.addRecipe(<ore:ingotPrudentium>, <ore:essenceIntermedium> * 4, <ore:ingotIntermedium>);
-   mods.nuclearcraft.AlloyFurnace.addRecipe(<ore:ingotIntermedium>, <ore:essenceSuperium> * 4, <ore:ingotSuperium>);
-   mods.nuclearcraft.AlloyFurnace.addRecipe(<ore:ingotSuperium>, <ore:essenceSupremium> * 4, <ore:ingotSupremium>);
-   mods.nuclearcraft.AlloyFurnace.addRecipe(<ore:ingotSupremium>, <ore:essenceInsanium> * 4, <ore:ingotInsanium>);
+   mods.nuclearcraft.alloy_furnace.addRecipe(<ore:ingotBaseEssence>, <ore:essenceInferium> * 4, <ore:ingotInferium>);
+   mods.nuclearcraft.alloy_furnace.addRecipe(<ore:ingotInferium>, <ore:essencePrudentium> * 4, <ore:ingotPrudentium>);
+   mods.nuclearcraft.alloy_furnace.addRecipe(<ore:ingotPrudentium>, <ore:essenceIntermedium> * 4, <ore:ingotIntermedium>);
+   mods.nuclearcraft.alloy_furnace.addRecipe(<ore:ingotIntermedium>, <ore:essenceSuperium> * 4, <ore:ingotSuperium>);
+   mods.nuclearcraft.alloy_furnace.addRecipe(<ore:ingotSuperium>, <ore:essenceSupremium> * 4, <ore:ingotSupremium>);
+   mods.nuclearcraft.alloy_furnace.addRecipe(<ore:ingotSupremium>, <ore:essenceInsanium> * 4, <ore:ingotInsanium>);
 
 # Tier 1 Seeds
    mods.botania.ElvenTrade.addRecipe([<mysticalagriculture:stone_seeds>], [<mysticalagriculture:crafting:17>, <ore:blockInferiumEssence>, <ore:stone>, <ore:stone>, <ore:stone>, <ore:stone>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
@@ -225,6 +256,10 @@ mods.thermalexpansion.InductionSmelter.addRecipe(<mysticalagriculture:crafting:1
    mods.botania.ElvenTrade.addRecipe([<mysticalagriculture:ironwood_seeds>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <ore:ingotIronwood>, <ore:ingotIronwood>, <ore:ingotIronwood>, <ore:ingotIronwood>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
    mods.botania.ElvenTrade.addRecipe([<mysticalagriculture:black_quartz_seeds>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <ore:blockQuartzBlack>, <ore:blockQuartzBlack>, <ore:blockQuartzBlack>, <ore:blockQuartzBlack>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
    mods.botania.ElvenTrade.addRecipe([<mysticalagriculture:certus_quartz_seeds>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <appliedenergistics2:quartz_block>, <appliedenergistics2:quartz_block>, <appliedenergistics2:quartz_block>, <appliedenergistics2:quartz_block>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<jaopca:item_mysticalseedsdimensionalshard>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <ore:blockDimensionalShard>, <ore:blockDimensionalShard>, <ore:blockDimensionalShard>, <ore:blockDimensionalShard>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<jaopca:item_mysticalseedsbauxite>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <ore:blockBauxite>, <ore:blockBauxite>, <ore:blockBauxite>, <ore:blockBauxite>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<jaopca:item_mysticalseedsgalena>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <ore:blockGalena>, <ore:blockGalena>, <ore:blockGalena>, <ore:blockGalena>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<jaopca:item_mysticalseedssodalite>], [<mysticalagriculture:crafting:19>, <ore:blockIntermedium>, <ore:blockSodalite>, <ore:blockSodalite>, <ore:blockSodalite>, <ore:blockSodalite>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
 
 # Tier 4 Seeds
    mods.botania.ElvenTrade.addRecipe([<mysticalagriculture:nickel_seeds>], [<mysticalagriculture:crafting:20>, <ore:blockSuperium>, <ore:blockNickel>, <ore:blockNickel>, <ore:blockNickel>, <ore:blockNickel>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
@@ -263,7 +298,7 @@ mods.thermalexpansion.InductionSmelter.addRecipe(<mysticalagriculture:crafting:1
    mods.botania.ElvenTrade.addRecipe([<mysticalagriculture:draconium_seeds>], [<mysticalagriculture:crafting:21>, <ore:blockSupremium>, <ore:blockDraconium>, <ore:blockDraconium>, <ore:blockDraconium>, <ore:blockDraconium>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
 
 # Tier 6 Seeds
-   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:nether_star_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockSupremium>, <ore:blockNetherStar>, <ore:blockNetherStar>, <ore:blockNetherStar>, <ore:blockNetherStar>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
-   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:dragon_egg_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockSupremium>, <minecraft:dragon_egg>, <minecraft:dragon_egg>, <minecraft:dragon_egg>, <minecraft:dragon_egg>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
-   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:awakened_draconium_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockSupremium>, <ore:blockDraconiumAwakened>, <ore:blockDraconiumAwakened>, <ore:blockDraconiumAwakened>, <ore:blockDraconiumAwakened>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
-   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:neutronium_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockSupremium>, <ore:blockCosmicNeutronium>, <ore:blockCosmicNeutronium>, <ore:blockCosmicNeutronium>, <ore:blockCosmicNeutronium>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:nether_star_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockInsanium>, <ore:blockNetherStar>, <ore:blockNetherStar>, <ore:blockNetherStar>, <ore:blockNetherStar>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:dragon_egg_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockInsanium>, <minecraft:dragon_egg>, <minecraft:dragon_egg>, <minecraft:dragon_egg>, <minecraft:dragon_egg>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:awakened_draconium_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockInsanium>, <ore:blockDraconiumAwakened>, <ore:blockDraconiumAwakened>, <ore:blockDraconiumAwakened>, <ore:blockDraconiumAwakened>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);
+   mods.botania.ElvenTrade.addRecipe([<mysticalagradditions:neutronium_seeds>], [<mysticalagradditions:insanium:1>, <ore:blockInsanium>, <ore:blockCosmicNeutronium>, <ore:blockCosmicNeutronium>, <ore:blockCosmicNeutronium>, <ore:blockCosmicNeutronium>, <mysticalagriculture:mystical_fertilizer>, <extrautils2:suncrystal>]);

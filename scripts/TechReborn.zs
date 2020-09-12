@@ -10,6 +10,7 @@ recipes.remove(<techreborn:part:29>);
 recipes.remove(<techreborn:part:30>);
 mods.techreborn.assemblingMachine.removeRecipe(<techreborn:part:41>);
 mods.techreborn.assemblingMachine.removeRecipe(<techreborn:part:41> * 2);
+mods.immersiveengineering.MetalPress.removeRecipe(<techreborn:plates:36>);
 
 # Add Recipes
 recipes.addShaped(<techreborn:part:29>, [[null , null, null], [<ore:stickIron>, <techreborn:part:40>, <ore:stickIron>], [<techreborn:cable:5>, <techreborn:cable:5>,<techreborn:cable:5>]]);
